@@ -8,15 +8,25 @@
 # se verdadeiro, counter += 1
 # retornar counter
 
+
 def study_schedule(permanence_period, target_time):
+    """
+    Inputs:
+    permanence_period: list[tuple[int, int]]
+    target_time: int
+
+    Output:
+    counter: int
+    """
     if target_time is None:
         return None
-    
+
     counter = 0
     for login_time, logout_time in permanence_period:
-        if (not isinstance(login_time, int)) or (not isinstance(logout_time, int)):
+        if not (isinstance(login_time, int) and isinstance(logout_time, int)):
             return None
 
-        if login_time <= target_time <= logout_time: counter += 1
+        if login_time <= target_time <= logout_time:
+            counter += 1
 
     return counter
