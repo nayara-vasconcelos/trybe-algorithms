@@ -1,7 +1,10 @@
-# Problema:
-# Descobrir o horário que tem a maior quantidade de pessoas acessando a plataforma
-# Dados: Tuple(horário de entrada, horario de saída) -> permanece_period
-# Estratégia: Força bruta
+# - Problema:
+# Descobrir o horário que tem a maior quantidade
+# de pessoas acessando a plataforma
+# - Dados:
+# list[tuple[int, int]
+# [(horário de entrada, horario de saída)] -> permanece_period
+# - Estratégia: Força bruta
 
 # verificar se o horário de entrada é menor ou igual ao target_time
 # ou se o horário de saída é maior ou igual ao target_time
