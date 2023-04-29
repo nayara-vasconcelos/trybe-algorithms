@@ -1,3 +1,9 @@
+# Refs:
+# - Course da Trybe e repositório de aulas da turma
+# - https://www.delftstack.com/pt/howto/python/convert-string-to-ascii-python/
+# - https://www.delftstack.com/pt/howto/python/python-int-to-ascii/
+
+
 # Ideias:
 
 # 1)
@@ -38,14 +44,17 @@ def partition(numbers, start, end):
 
     for index in range(start, end):  # índice no elemento a ser comparado
         if numbers[index] <= pivot:
-            delimiter = delimiter + 1
+            delimiter += 1
             numbers[index], numbers[delimiter] = (
                 numbers[delimiter],
                 numbers[index],
             )  # Todos que forem menor que o pivô ficarão a esquerda
-    numbers[delimiter + 1], numbers[end] = numbers[end], numbers[delimiter + 1]
 
-    return delimiter + 1
+    delimiter += 1
+    # Coloca o pivô na posição correta
+    numbers[delimiter], numbers[end] = numbers[end], numbers[delimiter]
+
+    return delimiter  # retorna a posição do elemento ordenado
 
 
 def is_anagram(first_string, second_string):
